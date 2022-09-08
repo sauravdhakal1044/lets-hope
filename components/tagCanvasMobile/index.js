@@ -33,34 +33,37 @@ function CanvasEffectMobile() {
     ];
 
     useEffect(() => {
-        TagCanvas.wheelZoom = false;
-        TagCanvas.textFont = "Raleway, sans-serif";
-        TagCanvas.textColour = theme === "dark" ? "cyan" : "#241835";
-        TagCanvas.textHeight = 15;
-        TagCanvas.outlineMethod = "size";
-        TagCanvas.outlineIncrease = 10;
-        TagCanvas.maxSpeed = 0.08;
-        TagCanvas.minBrightness = 0.2;
-        TagCanvas.depth = 0.5;
-        TagCanvas.pulsateTo = 0.6;
-        TagCanvas.initial = [0.1, -0.1];
-        TagCanvas.decel = 0.98;
-        TagCanvas.reverse = true;
-        TagCanvas.hideTags = false;
-        TagCanvas.shadow = false;
-        TagCanvas.shadowBlur = 3;
-        TagCanvas.weight = false;
-        TagCanvas.imageScale = null;
-        TagCanvas.fadeIn = 1000;
-        TagCanvas.clickToFront = 600;
-        TagCanvas.width = window.innerWidth/2;
-        TagCanvas.height = window.innerHeight;
+        setTimeout(() => {
+            TagCanvas.wheelZoom = false;
+            TagCanvas.textFont = "Raleway, sans-serif";
+            TagCanvas.textColour = theme === "dark" ? "cyan" : "#241835";
+            TagCanvas.textHeight = 15;
+            TagCanvas.outlineMethod = "size";
+            TagCanvas.outlineIncrease = 10;
+            TagCanvas.maxSpeed = 0.08;
+            TagCanvas.minBrightness = 0.2;
+            TagCanvas.depth = 0.5;
+            TagCanvas.pulsateTo = 0.6;
+            TagCanvas.initial = [0.1, -0.1];
+            TagCanvas.decel = 0.98;
+            TagCanvas.reverse = true;
+            TagCanvas.hideTags = false;
+            TagCanvas.shadow = false;
+            TagCanvas.shadowBlur = 3;
+            TagCanvas.weight = false;
+            TagCanvas.imageScale = null;
+            TagCanvas.fadeIn = 1000;
+            TagCanvas.clickToFront = 600;
+            TagCanvas.width = window.innerWidth / 2;
+            TagCanvas.height = window.innerHeight;
 
-        try {
-            TagCanvas.Start("tagcanvasMobile", "taglistMobile");
-        } catch (e) {
-            console.log("Canvas error.");
-        }
+            try {
+                TagCanvas.Start("tagcanvasMobile", "taglistMobile");
+            } catch (e) {
+                console.log("Canvas error.");
+            }
+        }, 1500);
+
     }, [theme])
 
     return (
