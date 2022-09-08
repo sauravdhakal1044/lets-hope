@@ -188,10 +188,10 @@ export default function About() {
                 <SkillsTable />
               </div>
               <div className='hidden lg:block bg-[#FBE8EE] dark:bg-[#111827] transition-all duration-300 ease-in-out'>
-                <CanvasEffect />
+                {/* <CanvasEffect /> */}
               </div>
               <div className='-ml-4 lg:hidden bg-[#FBE8EE] dark:bg-[#111827] transition-all duration-300 ease-in-out'>
-                <CanvasEffectMobile />
+                {/* <CanvasEffectMobile /> */}
               </div>
             </div>
             <p className='text-gray-600 py-2 lg:ml-10'>{"</skills>"}</p>
