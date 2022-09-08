@@ -60,7 +60,6 @@ function CanvasEffectMobile() {
             TagCanvas.Start("tagcanvasMobile", "taglistMobile");
         } catch (e) {
             console.log("Canvas error.");
-            console.log(e);
         }
     }, [theme])
 

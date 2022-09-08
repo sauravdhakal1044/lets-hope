@@ -33,34 +33,35 @@ function CanvasEffect() {
     ];
 
     useEffect(() => {
-        TagCanvas.wheelZoom = false;
-        TagCanvas.textFont = "Raleway, sans-serif";
-        TagCanvas.textColour = theme === "dark" ? "cyan" : "#241835";
-        TagCanvas.textHeight = 26;
-        TagCanvas.outlineMethod = "size";
-        TagCanvas.outlineIncrease = 10;
-        TagCanvas.maxSpeed = 0.1;
-        TagCanvas.minBrightness = 0.2;
-        TagCanvas.depth = 0.92;
-        TagCanvas.pulsateTo = 0.6;
-        TagCanvas.initial = [0.1, -0.1];
-        TagCanvas.decel = 0.98;
-        TagCanvas.reverse = true;
-        TagCanvas.hideTags = false;
-        TagCanvas.shadow = false;
-        TagCanvas.shadowBlur = 3;
-        TagCanvas.weight = false;
-        TagCanvas.imageScale = null;
-        TagCanvas.fadeIn = 1000;
-        TagCanvas.clickToFront = 600;
-        TagCanvas.width = window.innerWidth;
-        TagCanvas.height = window.innerHeight;
+        if (TagCanvas) {
+            TagCanvas.wheelZoom = false;
+            TagCanvas.textFont = "Raleway, sans-serif";
+            TagCanvas.textColour = theme === "dark" ? "cyan" : "#241835";
+            TagCanvas.textHeight = 26;
+            TagCanvas.outlineMethod = "size";
+            TagCanvas.outlineIncrease = 10;
+            TagCanvas.maxSpeed = 0.1;
+            TagCanvas.minBrightness = 0.2;
+            TagCanvas.depth = 0.92;
+            TagCanvas.pulsateTo = 0.6;
+            TagCanvas.initial = [0.1, -0.1];
+            TagCanvas.decel = 0.98;
+            TagCanvas.reverse = true;
+            TagCanvas.hideTags = false;
+            TagCanvas.shadow = false;
+            TagCanvas.shadowBlur = 3;
+            TagCanvas.weight = false;
+            TagCanvas.imageScale = null;
+            TagCanvas.fadeIn = 1000;
+            TagCanvas.clickToFront = 600;
+            TagCanvas.width = window.innerWidth;
+            TagCanvas.height = window.innerHeight;
 
-        try {
-            TagCanvas.Start("tagcanvas", "taglist");
-        } catch (e) {
-            console.log("Canvas error.");
-            console.log(e);
+            try {
+                TagCanvas.Start("tagcanvas", "taglist");
+            } catch (e) {
+                console.log("Canvas error.");
+            }
         }
     }, [theme])
 
