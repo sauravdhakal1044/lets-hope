@@ -33,7 +33,7 @@ function CanvasEffect() {
     ];
 
     useEffect(() => {
-        if (TagCanvas) {
+        setTimeout(() => {
             TagCanvas.wheelZoom = false;
             TagCanvas.textFont = "Raleway, sans-serif";
             TagCanvas.textColour = theme === "dark" ? "cyan" : "#241835";
@@ -58,11 +58,13 @@ function CanvasEffect() {
             TagCanvas.height = window.innerHeight;
 
             try {
-                TagCanvas.Start("tagcanvas", "taglist");
+                TagCanvas?.Start("tagcanvas", "taglist");
             } catch (e) {
                 console.log("Canvas error.");
             }
-        }
+        }, 1000);
+
+
     }, [theme])
 
     return (
