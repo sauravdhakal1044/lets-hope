@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../../components/footer'
 import Tendrils from '../../components/Tendrils Effects'
 import Emailjs from '@emailjs/browser'
@@ -7,6 +7,7 @@ export default function Contact() {
 
   const domItem = useRef(null)
   const form = useRef();
+  const [email, setemail] = useState(false)
 
   const animateFunc = (e) => {
     e.target.classList.remove("bounceIn")
@@ -18,14 +19,15 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(process.env)
 
     Emailjs.sendForm(process.env.EMAILJS_SERVICE, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
+        setemail(true)
       }, (error) => {
         console.log(error.text);
       });
+
 
     e.target.reset()
   };
@@ -86,46 +88,68 @@ export default function Contact() {
                 <div ref={domItem} className="title hidden" >
                   Contact me
                 </div>
+
               </div>
+
               <div className=' lg:mt-10'>
                 <p className='text-gray-600 ml-2 lg:ml-6'>{"</h1>"}</p>
                 <p className='text-gray-600 ml-4 lg:ml-6'>{"<p>"}</p>
                 <p className='text-gray-800 dark:text-white lg:text-lg font-sans  ml-2 lg:ml-20'>If you have anything to say to me or Wanna <span className='dark:text-[#00ffff] font-medium text-green-600'>Work</span> with me or <span className='dark:text-[#00ffff] font-medium text-green-600'>Hire me</span> then don't hesitate to fill the form.</p>
                 <p className='text-gray-600 ml-4 lg:ml-6'>{"</p>"}</p>
               </div>
-              <div className=''>
-                <p className='text-gray-600 ml-2 lg:ml-6'>{"<form>"}</p>
-                <form ref={form} action="" className='pointer-events-auto  w-[88%] lg:[85%] lg:ml-10 mx-auto grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={sendEmail}>
-                  <div className='lg:flex w-full grid grid-cols-1 gap-y-2 lg:gap-x-2 formItems'>
-                    <div className='w-full '>
-                      <p className='text-gray-800 dark:text-white font-sans'>Name</p>
-                      <input type="text" placeholder='your company or your name' name="name" className='w-full h-8 lg:h-10 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
+              {
+                email ? (
+                  <div className='h-fit w-full bg-slate-700 rounded-lg'>
+                    <div className="lg:px-10 md:px-32 relative z-10 ">
+                      <div className="max-w-screen-xl mx-auto">
+                        <div className="bg-bgSecondaryColor p-12 text-center">
+                          <h1 className="text-white text-6xl bg-slate-800 py-2 rounded-md">
+                            Thank <span className="text-border">you!</span>
+                          </h1>
+                          <div className="text-xl text-white mt-6 bg-slate-800 py-2 rounded-md max-w-prose mx-auto">
+                            {
+                              "I've received your message."
+                            }
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className='w-full '>
-                      <p className='text-gray-800 dark:text-white font-sans'>Email</p>
-                      <input type="email" placeholder='eg: dhakalsaurav023@gmail.com ' name="email" className='w-full h-8 lg:h-10 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
-                    </div>
                   </div>
+                ) :
+                  (<div className=''>
+                    <p className='text-gray-600 ml-2 lg:ml-6'>{"<form>"}</p>
+                    <form ref={form} action="" className='pointer-events-auto  w-[88%] lg:[85%] lg:ml-10 mx-auto grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={sendEmail}>
+                      <div className='lg:flex w-full grid grid-cols-1 gap-y-2 lg:gap-x-2 formItems'>
+                        <div className='w-full '>
+                          <p className='text-gray-800 dark:text-white font-sans'>Name</p>
+                          <input type="text" placeholder='your company or your name' name="name" className='w-full h-8 lg:h-10 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
+                        </div>
+                        <div className='w-full '>
+                          <p className='text-gray-800 dark:text-white font-sans'>Email</p>
+                          <input type="email" placeholder='eg: dhakalsaurav023@gmail.com ' name="email" className='w-full h-8 lg:h-10 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
+                        </div>
+                      </div>
 
-                  <div className='formItems'>
-                    <p className='text-gray-800 dark:text-white font-sans'>Message</p>
-                    <input type="text" placeholder='eg : you are hired for the work' name="message" className='w-full h-20 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
-                  </div>
+                      <div className='formItems'>
+                        <p className='text-gray-800 dark:text-white font-sans'>Message</p>
+                        <input type="text" placeholder='eg : you are hired for the work' name="message" className='w-full h-20 rounded placeholder:text-sm placeholder:text-gray-400 focus:ring-gray-800 border-gray-500 focus:border-gray-800 dark:focus:ring-[#00ffff] dark:focus:border-[#00ffff]' id="" />
+                      </div>
 
-                  <div className='w-full items-center flex justify-center formItems'>
-                    <button className='text-gray-800 dark:text-white  pointer-events-auto w-full lg:w-[50%] mx-auto my-2   border h-8 lg:h-10 rounded hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-black border-gray-800 dark:border-white after:bg-gray-700 dark:after:bg-[#00ffff] '>
-                      Send Message
-                    </button>
-                  </div>
+                      <div className='w-full items-center flex justify-center formItems'>
+                        <button className='text-gray-800 dark:text-white  pointer-events-auto w-full lg:w-[50%] mx-auto my-2   border h-8 lg:h-10 rounded hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-black border-gray-800 dark:border-white after:bg-gray-700 dark:after:bg-[#00ffff] '>
+                          Send Message
+                        </button>
+                      </div>
 
-                </form>
-                <p className='text-gray-600 ml-2 lg:ml-6 fadeInUpBig'>{"</form>"}</p>
-                <p className=' text-gray-600 lg:ml-4 lg:mt-1 fadeInUpBig'>{"</body>"}</p>
-                <p className=' text-gray-600 -ml-4 lg:ml-0 fadeInUpBig'>{"</html>"}</p>
-              </div>
+                    </form>
+                    <p className='text-gray-600 ml-2 lg:ml-6 fadeInUpBig'>{"</form>"}</p>
+                    <p className=' text-gray-600 lg:ml-4 lg:mt-1 fadeInUpBig'>{"</body>"}</p>
+                    <p className=' text-gray-600 -ml-4 lg:ml-0 fadeInUpBig'>{"</html>"}</p>
+                  </div>)
+              }
             </div>
           </div>
-          <div className='pt-2'>
+          <div className='pt-2 '>
 
             <Footer />
           </div>

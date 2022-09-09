@@ -84,7 +84,7 @@ function HomePage() {
                         <div className='lg:pt-10 lg:mt-10'>
                             <p className=' text-border dark:text-border-light opacity-60 dark:opacity-60 font-sans text-3xl md:text-5xl lg:text-6xl lg:ml-10 -mt-8 text-center'>Welcome, To My World</p>
                         </div>
-                        <p className=' text-slate-400 mt-4  -ml-4 mb-2 lg:ml-0'>{"<html>"}</p>
+                        <p className=' text-slate-400 mt-4  -ml-1 mb-2 lg:ml-0'>{"<html>"}</p>
                         <p className=' text-slate-400  lg:ml-4 lg:mt-1'>{"<body>"}</p>
                         <p className=' text-slate-400  ml-2 lg:ml-6'>{"<h1>"}</p>
                         <div className='my-3 lg:h-44 lg:w-[80%] mx-auto pointer-events-auto   items-center relative ' >
@@ -99,7 +99,7 @@ function HomePage() {
                             <p className='text-gray-800 dark:text-white md:text-lg lg:text-lg font-sans  ml-2 lg:ml-20'>You can also call me Saurav Dhakal.</p>
                             <p className='text-slate-400  ml-2 lg:ml-8'>{"</p>"}</p>
                             <p className='text-slate-400  lg:ml-4'>{"</body>"}</p>
-                            <p className='text-slate-400 -ml-4 lg:ml-0  mt-2'>{"</html>"}</p>
+                            <p className='text-slate-400 -ml-1 lg:ml-0  mt-2'>{"</html>"}</p>
                         </div>
                         <div className='bottom-28 pointer-events-auto  hidden lg:block'>
                             <Accounts />

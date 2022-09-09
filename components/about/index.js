@@ -140,7 +140,7 @@ export default function About() {
             <div className='hidden lg:block'>
               <CanvasEffect />
             </div>
-            <div className=' lg:hidden'>
+            <div className='-ml-4 lg:hidden bg-[#FBE8EE] dark:bg-[#111827] transition-all duration-300 ease-in-out'>
               <CanvasEffectMobile />
             </div>
           </div>
