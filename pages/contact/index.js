@@ -33,6 +33,7 @@ export default function Contact() {
 
   useEffect(() => {
     setTimeout(() => {
+      console.log(process.env)
       // if (set) {
       const text = domItem.current?.textContent
       const splittext = text.split("")
