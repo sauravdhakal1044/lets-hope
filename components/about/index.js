@@ -103,7 +103,7 @@ export default function About() {
             <div className=' lg:mt-10'>
               <p className='text-gray-600 ml-2 lg:ml-6'>{"</h1>"}</p>
               <p className='text-gray-600 ml-2 lg:ml-8'>{"<p>"}</p>
-              <p className='text-gray-800 dark:text-white lg:text-lg font-sans lg:w-[80%]  ml-4 lg:ml-16'>Iam a full-stack developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code. </p>
+              <p className='text-gray-800 dark:text-white lg:text-lg font-sans lg:w-[80%]  ml-4 lg:ml-16'>I'm a full-stack developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code. </p>
               <p className='text-gray-800 ml-4 lg:ml-16 lg:text-lg dark:text-white font-sans my-2 lg:w-[80%]'>I have been learning and doing projects, and creating fabulous projects for the past two years.</p>
               <p className='text-gray-600 ml-2 lg:ml-10'>{"</p>"}</p>
               <div className='  py-8 lg:pl-12 pointer-events-auto'>

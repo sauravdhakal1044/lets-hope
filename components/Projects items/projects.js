@@ -47,7 +47,7 @@ const projects = [
     },
     {
         name: "SdJobs",
-        abstract: "SdJobs is a web app for helping you finding jobs and keeping track of your jobs.",
+        abstract: "SdJobs is a web app for helping you to find jobs and keeping track of your jobs.",
         img: "https://res.cloudinary.com/dgsf8n4sa/image/upload/v1660819599/Projects/Screenshot_from_2022-08-18_16-31-24_ry1tm7.png",
         href: "",
         github: "",
