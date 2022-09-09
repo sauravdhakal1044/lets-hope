@@ -33,10 +33,10 @@ export default function Home() {
             content="I'am a Full-stack Web developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code."
           />
 
-          {/* <meta
+          <meta
             property="og:image"
-            content="https://sisirdhakal.vercel.app/assets/images"
-          /> */}
+            content="https://sisirdhakal.vercel.app/assets/images/Home.webp"
+          />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Home / Sisir" />
