@@ -21,36 +21,32 @@ export default function Home() {
             content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
           />
           <meta name="title" content="Home-Sisir" />
-          {/* <meta
+          <meta
             name="description"
-            content="I am a very nice and humble front-end developer. I can design a
-          website on figma, develop it using NextJS, and deploy it on
-          Vercel. Well that’s what I did for this website, if you want to
-          know more, keep scrolling."
+            content="I'am a Full-stack Web developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code."
           />
 
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Home-Sisir" />
           <meta
             property="og:description"
-            content="I am a very nice and humble front-end developer. I can design a
-          website on figma, develop it using NextJS, and deploy it on
-          Vercel. Well that’s what I did for this website, if you want to
-          know more, keep scrolling."
+            content="I'am a Full-stack Web developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code."
           />
+
+          {/* <meta
+            property="og:image"
+            content="https://sisirdhakal.vercel.app/assets/images"
+          /> */}
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:title" content="Home / Sisir" />
           <meta
             property="twitter:description"
-            content="I am a very nice and humble front-end developer. I can design a
-          website on figma, develop it using NextJS, and deploy it on
-          Vercel. Well that’s what I did for this website, if you want to
-          know more, keep scrolling."
+            content="I'am a Full-stack Web developer who loves to build cool websites with beautiful designs. I love new challenges and problems and to code."
           />
-        
+
           <meta property="og:image:width" content="300" />
-          <meta property="og:image:height" content="300" /> */}
+          <meta property="og:image:height" content="300" />
         </Head>
         <HomePage />
         <Animation>

@@ -75,7 +75,7 @@ export default function Contact() {
         <Tendrils />
 
         <div className='absolute h-full w-full items-center pt-20 overflow-y-scroll scrollbar-hide'>
-          <div className='px-10'>
+          <div className='px-4 lg:px-10'>
             <div className='relative htmlTags lg:w-[60%]  lg:mx-auto pointer-events-none'>
               <p className=' text-gray-600 -ml-4 lg:ml-0'>{"<html>"}</p>
               <p className=' text-gray-600 lg:ml-4 lg:mt-1'>{"<body>"}</p>
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
               <div className=''>
                 <p className='text-gray-600 ml-2 lg:ml-6'>{"<form>"}</p>
-                <form ref={form} action="" className='pointer-events-auto  w-[85%] ml-10 grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={sendEmail}>
+                <form ref={form} action="" className='pointer-events-auto  w-[88%] lg:[85%] lg:ml-10 mx-auto grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={sendEmail}>
                   <div className='lg:flex w-full grid grid-cols-1 gap-y-2 lg:gap-x-2 formItems'>
                     <div className='w-full '>
                       <p className='text-gray-800 dark:text-white font-sans'>Name</p>
