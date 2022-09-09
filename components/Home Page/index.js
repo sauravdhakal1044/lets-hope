@@ -36,7 +36,7 @@ function HomePage() {
                         }
                     }
                     let count = 0;
-                    let timer = setInterval(animateLetter, 65)
+                    let timer = setInterval(animateLetter, 50)
 
                     function animateLetter() {
                         const span = domItem.current?.querySelectorAll("span")[count]
