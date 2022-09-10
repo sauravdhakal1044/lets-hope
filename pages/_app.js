@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
 
   useEffect(() => {
-    // console.clear()
+    console.clear()
   }, [])
 
   const setTheme = (theme) => {

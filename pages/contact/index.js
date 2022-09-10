@@ -17,8 +17,8 @@ export default function Contact() {
     e.target.classList.remove("rubberBand")
   }
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = (event) => {
+    event.preventDefault()
 
     Emailjs.sendForm(process.env.EMAILJS_SERVICE, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
       .then((result) => {
@@ -118,7 +118,7 @@ export default function Contact() {
                 ) :
                   (<div className=''>
                     <p className='text-gray-600 ml-2 lg:ml-6'>{"<form>"}</p>
-                    <form ref={form} action="" className='pointer-events-auto  w-[88%] lg:[85%] lg:ml-10 mx-auto grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={sendEmail}>
+                    <form ref={form} action="" className='pointer-events-auto  w-[88%] lg:[85%] lg:ml-10 mx-auto grid grid-cols-1 gap-y-2 lg:gap-0' onSubmit={event => event.preventDefault()}>
                       <div className='lg:flex w-full grid grid-cols-1 gap-y-2 lg:gap-x-2 formItems'>
                         <div className='w-full '>
                           <p className='text-gray-800 dark:text-white font-sans'>Name</p>
@@ -136,11 +136,10 @@ export default function Contact() {
                       </div>
 
                       <div className='w-full items-center flex justify-center formItems'>
-                        <button className='text-gray-800 dark:text-white  pointer-events-auto w-full lg:w-[50%] mx-auto my-2   border h-8 lg:h-10 rounded hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-black border-gray-800 dark:border-white after:bg-gray-700 dark:after:bg-[#00ffff] '>
+                        <button type={"button"} className='text-gray-800 dark:text-white  pointer-events-auto w-full lg:w-[50%] mx-auto my-2   border h-8 lg:h-10 rounded hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-black border-gray-800 dark:border-white after:bg-gray-700 dark:after:bg-[#00ffff] ' onClick={sendEmail}>
                           Send Message
                         </button>
                       </div>
-
                     </form>
                     <p className='text-gray-600 ml-2 lg:ml-6 fadeInUpBig'>{"</form>"}</p>
                     <p className=' text-gray-600 lg:ml-4 lg:mt-1 fadeInUpBig'>{"</body>"}</p>
