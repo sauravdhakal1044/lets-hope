@@ -122,6 +122,11 @@ function Navbar({ changeTheme }) {
                         Contact
                     </p>
                 </Link>
+                <Link href={"/resume"}>
+                    <p className={`text-gray-900 hover:text-[#00ffff] dark:hover:text-[#00ffff] relative navItems dark:text-white text-xl cursor-pointer ${routePath === "/resume" ? "activeRoute" : ""}`}>
+                        Resume
+                    </p>
+                </Link>
                 <div className='items-center cursor-pointer flex justify-center' >
                     {test === "dark" ?
                         (<MdDarkMode onClick={e => changetheme("light")} className='h-6 w-6 cursor-pointer text-gray-900 dark:text-white' />) : (<MdLightMode onClick={e => changetheme("dark")} className='h-6 w-6 cursor-pointer text-gray-900 dark:text-white' />)
@@ -189,6 +194,11 @@ function Navbar({ changeTheme }) {
                         <Link href={"/contact"}>
                                 <p className={`text-gray-900 dark:text-white text-5xl cursor-pointer font-medium ${routePath === "/contact" ? "text-border" : ""}`}>
                                     Contact
+                                </p>
+                        </Link>
+                        <Link href={"/resume"}>
+                                <p className={`text-gray-900 dark:text-white text-5xl cursor-pointer font-medium ${routePath === "/resume" ? "text-border" : ""}`}>
+                                    Resume
                                 </p>
                         </Link>
                     </div>

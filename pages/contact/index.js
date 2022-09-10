@@ -24,12 +24,12 @@ export default function Contact() {
       .then((result) => {
         console.log(result.text);
         setemail(true)
+        e.target.reset()
       }, (error) => {
         console.log(error.text);
       });
 
 
-    e.target.reset()
   };
 
 
