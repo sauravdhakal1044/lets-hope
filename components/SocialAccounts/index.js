@@ -7,11 +7,11 @@ function Accounts() {
     <>
 
       <div className='flex gap-5 justify-center'>
-        <a href="https://github.com/saurav1044" rel='noreferrer' target="_blank">
+        <a href="https://github.com/sisirdhakal" rel='noreferrer' target="_blank">
          
           <SiGithub className='h-6 w-6 cursor-pointer text-gray-900 dark:text-white dark:hover:text-[#3A9ECF]' />
         </a>
-        <a href="https://www.instagram.com/sauravdhakal_sd/" rel='noreferrer' target="_blank">
+        <a href="https://www.instagram.com/sisirdhakal_sd/" rel='noreferrer' target="_blank">
 
           <FaInstagram className='h-6 w-6 cursor-pointer text-gray-900 dark:text-white hover:text-[#C32866] dark:hover:text-[#C32866]' />
         </a>
