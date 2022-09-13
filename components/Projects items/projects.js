@@ -19,7 +19,7 @@ const projects = [
         name: "SdNews",
         abstract: "SdNews is a news website where you can read latest news.",
         img: "https://res.cloudinary.com/dgsf8n4sa/image/upload/v1661013152/Projects/Screenshot_from_2022-08-20_22-16-06_bb8nm7.png",
-        href: "",
+        href: "https://sdjobs.netlify.app/",
         github: "",
         techUsed: [
             "ReactJS , ",

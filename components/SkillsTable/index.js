@@ -55,14 +55,14 @@ function SkillsTable() {
         <div className=' mx-auto'>
 
 
-        <p  className='text-gray-900 py-2 dark:text-white'>ReactJS</p>
+        <p  className='text-gray-900 py-2 font-sans dark:text-white'>ReactJS</p>
           <div className='dark:bg-[#FBE8EE] bg-[#111827] h-1 rounded-md '>
             <div ref={reactJs} className='h-full rounded-md w-0 skillContainer transition-all duration-700 ease-in-out bg-indigo-600'>
 
             </div>
           </div>
 
-          <p className='text-gray-900 py-2 dark:text-white'>FrontEnd</p>
+          <p className='text-gray-900 py-2 font-sans dark:text-white'>FrontEnd</p>
           <div className='dark:bg-[#FBE8EE] bg-[#111827]  h-1 rounded-md '>
             <div ref={frontEnd} className='h-full rounded-md w-0 skillContainer transition-all duration-[1100ms]  ease-in-out bg-cyan-400'>
 
@@ -70,21 +70,21 @@ function SkillsTable() {
           </div>
 
 
-          <p ref={domContainer} className='text-gray-900 py-2 dark:text-white'>BackEnd-NodeJs/ExpressJs</p>
+          <p ref={domContainer} className='text-gray-900 py-2 dark:text-white font-sans'>BackEnd-NodeJs/ExpressJs</p>
           <div className='dark:bg-[#FBE8EE] bg-[#111827] h-1 rounded-md '>
             <div ref={backEnd} className='h-full rounded-md w-0 skillContainer transition-all duration-[1500ms] ease-in-out bg-red-600'>
 
             </div>
           </div>
 
-          <p className='text-gray-900 py-2 dark:text-white'>UI/UX</p>
+          <p className='text-gray-900 py-2 font-sans dark:text-white'>UI/UX</p>
           <div className='dark:bg-[#FBE8EE] bg-[#111827] h-1 rounded-md '>
             <div ref={uiux} className='h-full rounded-md w-0 skillContainer transition-all duration-[1900ms] ease-in-out bg-pink-500'>
 
             </div>
           </div>
 
-          <p className='text-gray-900 py-2 dark:text-white'>MongoDB</p>
+          <p className='text-gray-900 py-2 font-sans dark:text-white'>MongoDB</p>
           <div className='dark:bg-[#FBE8EE] bg-[#111827] h-1 rounded-md '>
             <div ref={mongoDB} className='h-full rounded-md w-0 skillContainer transition-all duration-[2300ms] ease-in-out bg-emerald-500'>
 
