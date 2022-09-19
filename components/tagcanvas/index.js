@@ -62,7 +62,7 @@ function CanvasEffect() {
             } catch (e) {
                 console.log("Canvas error.");
             }
-        }, 1000);
+        }, 1500);
 
 
     }, [theme])

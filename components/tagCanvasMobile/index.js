@@ -62,7 +62,7 @@ function CanvasEffectMobile() {
             } catch (e) {
                 console.log("Canvas error.");
             }
-        }, 1000);
+        }, 1400);
 
     }, [theme])
 

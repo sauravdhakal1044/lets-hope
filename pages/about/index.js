@@ -227,7 +227,6 @@ export default function About() {
             <p className='text-gray-600 lg:ml-12'>{"</education>"}</p>
             <p className='text-gray-600 lg:ml-9 -ml-2 lg:py-1'>{"</body>"}</p>
             <p className='text-gray-600 -ml-4  py-1 lg:ml-6'>{"</html>"}</p>
-            <p className='text-gray-600 -ml-4  py-1 lg:ml-6'>{"</html>"}</p>
           </div>
           <div className='pt-2'>
 
