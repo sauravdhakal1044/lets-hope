@@ -18,12 +18,12 @@ export default function Item({ value }) {
                         </div>
                         <div className='btns grid grid-cols-2 pr-2 my-4 lg:my-0 lg:absolute lg:bottom-2'>
 
-                            <a href={value.href}>
+                            <a rel='noreferrer' target={"_blank"} href={value.href}>
                                 <button className='text-white dark:text-white  pointer-events-auto w-full lg:w-36 border h-10 rounded p-2 hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-gray-800 dark:hover:text-black border-gray-800 dark:border-white after:bg-slate-200 bg-slate-600 dark:bg-slate-700 dark:after:bg-[#00ffff]'>
                                     Visit
                                 </button>
                             </a>
-                            <a href={value.href}>
+                            <a rel='noreferrer' target={"_blank"} href={value.href}>
                                 <button className='text-gray-800 dark:text-gray-800  pointer-events-auto w-full lg:w-36  border h-10 rounded p-2 ml-2 hoverBtn btn1 transition-colors duration-300 ease-in-out hover:text-white dark:hover:text-black border-gray-800 dark:border-white after:bg-gray-700 bg-slate-200 dark:after:bg-[#00ffff]'>
                                     Github
                                 </button>
