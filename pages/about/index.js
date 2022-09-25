@@ -145,7 +145,7 @@ export default function About() {
                     I am currently pursuing my third year Bachelor of <span className='text-[#00ffff] font-medium'>Computer Engineering</span>  at <span className='font-medium'>TU, IOE, PASCHIMANCHAL CAMPUS ( WRC )</span>
                   </p>
                   <p className='text-gray-800 ml-4 lg:ml-16 lg:text-lg dark:text-white font-sans my-2 lg:w-[80%] transition-all duration-300 ease-in-out'>
-                    I have been learning, and creating fabulous projects for the past two years.
+                    I have over 3 years of extensive development experience. I am a highly motivated and detail-oriented individual who is always looking for new challenges
                   </p>
 
                   <p className='text-gray-600 ml-2 lg:ml-10'>{"</p>"}</p>
